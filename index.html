@@ -37,7 +37,10 @@
     <header class="hero" id="hero">
         <div class="hero-content">
             <h1 data-reveal class="stagger-1">Eva Lassalle</h1>
-            <p data-reveal class="stagger-2">Apprentie Data Analyst | Étudiante en MBA Big Data</p>
+            <p data-reveal class="stagger-2">
+                <span class="typewriter" id="typewriter-text">Apprentie Data Analyst</span><br>
+                Étudiante en MBA Big Data
+            </p>
             <div class="hero-btns stagger-3" data-reveal>
                 <a href="#projects" class="btn btn-primary">Voir mes projets</a>
                 <a href="CV_Eva_LASSALLE.pdf" target="_blank" class="btn btn-outline">Télécharger mon CV</a>
@@ -150,27 +153,43 @@
 
     <section id="projects" data-reveal>
         <h2 class="section-title">Réalisations Marquantes</h2>
-        <div class="glass-card" style="display: flex; gap: 30px; align-items: center; cursor: pointer;"
-            onclick="window.open('https://data.lamayenne.fr/pages/projection-population/', '_blank')">
-            <div style="flex: 1;">
-                <h3 style="margin-bottom: 15px;">Observatoire des Projections de Population</h3>
-                <p style="margin-bottom: 20px;">Développement d'une plateforme interactive permettant de visualiser
-                    l'évolution démographique de la Mayenne à l'horizon 2050. Utilisation de données INSEE et
-                    intégration via OpendataSoft.</p>
-                <div class="skill-tags">
-                    <span class="skill-tag">Data Analysis</span>
-                    <span class="skill-tag">OpendataSoft</span>
-                    <span class="skill-tag">Dataviz</span>
+
+        <div class="projects-container" style="display: flex; flex-direction: column; gap: 40px;">
+            <!-- Projet 1 -->
+            <div class="glass-card project-card"
+                onclick="window.open('https://data.lamayenne.fr/pages/projection-population/', '_blank')">
+                <div class="project-info">
+                    <h3>Observatoire des Projections de Population</h3>
+                    <p>Développement d'une plateforme interactive permettant de visualiser l'évolution démographique de
+                        la Mayenne à l'horizon 2050. Utilisation de données INSEE et intégration via OpendataSoft.</p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Data Analysis</span>
+                        <span class="skill-tag">OpendataSoft</span>
+                        <span class="skill-tag">Dataviz</span>
+                    </div>
                 </div>
-                <div
-                    style="margin-top: 20px; color: var(--accent-color); display: flex; align-items: center; gap: 5px;">
-                    Voir le projet <i data-lucide="external-link" size="16"></i>
+                <div class="project-img-box">
+                    <img src="project-thumb.jpg" alt="Projection Population Mayenne">
                 </div>
             </div>
-            <div
-                style="width: 300px; height: 180px; background: rgba(0,0,0,0.3); border-radius: 12px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
-                <img src="project-thumb.jpg" alt="Projection Population Mayenne"
-                    style="width: 100%; height: 100%; object-fit: cover;">
+
+            <!-- Projet 2: App Musée -->
+            <div class="glass-card project-card"
+                onclick="window.open('https://github.com/elassalle49/app-musee', '_blank')">
+                <div class="project-info">
+                    <h3>App Musée Saint-Denis</h3>
+                    <p>Conception et développement d'une application interactive pour les visiteurs du Musée de
+                        Saint-Denis. Focus sur l'expérience utilisateur et la valorisation du patrimoine via des technos
+                        web modernes.</p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Web Development</span>
+                        <span class="skill-tag">UI/UX Design</span>
+                        <span class="skill-tag">Patrimoine</span>
+                    </div>
+                </div>
+                <div class="project-img-box">
+                    <img src="app-musee.jpg" alt="App Musée Saint-Denis">
+                </div>
             </div>
         </div>
     </section>

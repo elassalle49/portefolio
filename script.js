@@ -7,6 +7,15 @@ const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('active');
+
+            // Trigger typewriter if the target contains it
+            const typewriter = entry.target.querySelector('.typewriter');
+            if (typewriter) {
+                setTimeout(() => {
+                    typewriter.classList.add('animate');
+                }, 800); // Wait for the hero reveal animation
+            }
+
             observer.unobserve(entry.target);
         }
     });
