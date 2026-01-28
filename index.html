@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eva Lassalle | Portfolio Data Analyst</title>
-    <meta name="description" content="Portfolio de Eva Lassalle, étudiante en MBA Big Data et Apprentie Data Analyst. Découvrez mes projets, compétences et expériences en analyse de données.">
+    <meta name="description"
+        content="Portfolio de Eva Lassalle, étudiante en MBA Big Data et Apprentie Data Analyst. Découvrez mes projets, compétences et expériences en analyse de données.">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
+
 <body>
     <div class="bg-blobs">
         <div class="blob blob-1"></div>
@@ -32,18 +35,28 @@
     </nav>
 
     <header class="hero" id="hero">
-        <h1 data-reveal>Eva Lassalle</h1>
-        <p data-reveal>Apprentie Data Analyst | Étudiante en MBA Big Data</p>
-        <div class="hero-btns" data-reveal>
-            <a href="#projects" class="btn btn-primary">Voir mes projets</a>
-            <a href="CV_Eva_LASSALLE.pdf" target="_blank" class="btn btn-outline">Télécharger mon CV</a>
+        <div class="hero-content">
+            <h1 data-reveal class="stagger-1">Eva Lassalle</h1>
+            <p data-reveal class="stagger-2">Apprentie Data Analyst | Étudiante en MBA Big Data</p>
+            <div class="hero-btns stagger-3" data-reveal>
+                <a href="#projects" class="btn btn-primary">Voir mes projets</a>
+                <a href="CV_Eva_LASSALLE.pdf" target="_blank" class="btn btn-outline">Télécharger mon CV</a>
+            </div>
+        </div>
+        <div class="hero-image stagger-4" data-reveal>
+            <div class="profile-img-container">
+                <img src="Photo_Eva.jpg" alt="Eva Lassalle" class="profile-img">
+            </div>
         </div>
     </header>
 
-    <section id="about">
+    <section id="about" data-reveal>
         <h2 class="section-title">À propos de moi</h2>
         <div class="glass-card">
-            <p>Étudiante passionnée par la donnée dans le cadre de mon MBA Big Data, je combine curiosité analytique et rigueur technique pour transformer les données complexes en insights actionnables. Actuellement Apprentie Data Analyst au Conseil Départemental de la Mayenne, j'interviens sur des problématiques variées allant de la collecte à la visualisation interactive.</p>
+            <p>Étudiante passionnée par la donnée dans le cadre de mon MBA Big Data, je combine curiosité analytique et
+                rigueur technique pour transformer les données complexes en insights actionnables. Actuellement
+                Apprentie Data Analyst au Conseil Départemental de la Mayenne, j'interviens sur des problématiques
+                variées allant de la collecte à la visualisation interactive.</p>
             <div style="margin-top: 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
                 <div>
                     <h4 style="color: var(--accent-color); margin-bottom: 10px;">Formation</h4>
@@ -60,7 +73,7 @@
         </div>
     </section>
 
-    <section id="skills">
+    <section id="skills" data-reveal>
         <h2 class="section-title">Ma Boîte à Outils</h2>
         <div class="skills-grid">
             <div class="glass-card skill-category">
@@ -96,14 +109,15 @@
         </div>
     </section>
 
-    <section id="experience">
+    <section id="experience" data-reveal>
         <h2 class="section-title">Expériences Professionnelles</h2>
         <div class="timeline">
             <div class="timeline-item">
                 <div class="timeline-date">Depuis Sept. 2025</div>
                 <div class="glass-card">
                     <h3>Apprentie Data Analyst</h3>
-                    <p style="color: var(--accent-color); margin-bottom: 10px;">Conseil Départemental de la Mayenne, Laval</p>
+                    <p style="color: var(--accent-color); margin-bottom: 10px;">Conseil Départemental de la Mayenne,
+                        Laval</p>
                     <ul style="list-style: disc; margin-left: 20px; font-size: 0.95rem;">
                         <li>Collecte et traitement des données sources (INSEE, Data.gouv, etc.)</li>
                         <li>Développement de tableaux de bord interactifs pour le public et l'interne.</li>
@@ -127,29 +141,36 @@
                 <div class="glass-card">
                     <h3>Stage Data Quality Scientist</h3>
                     <p style="color: var(--accent-color); margin-bottom: 10px;">BNP Paribas, Paris</p>
-                    <p>Optimisation d'une application internet via l'intégration de bases de données et outils Excel.</p>
+                    <p>Optimisation d'une application internet via l'intégration de bases de données et outils Excel.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="projects">
+    <section id="projects" data-reveal>
         <h2 class="section-title">Réalisations Marquantes</h2>
-        <div class="glass-card" style="display: flex; gap: 30px; align-items: center; cursor: pointer;" onclick="window.open('https://data.lamayenne.fr/pages/projection-population/', '_blank')">
+        <div class="glass-card" style="display: flex; gap: 30px; align-items: center; cursor: pointer;"
+            onclick="window.open('https://data.lamayenne.fr/pages/projection-population/', '_blank')">
             <div style="flex: 1;">
                 <h3 style="margin-bottom: 15px;">Observatoire des Projections de Population</h3>
-                <p style="margin-bottom: 20px;">Développement d'une plateforme interactive permettant de visualiser l'évolution démographique de la Mayenne à l'horizon 2050. Utilisation de données INSEE et intégration via OpendataSoft.</p>
+                <p style="margin-bottom: 20px;">Développement d'une plateforme interactive permettant de visualiser
+                    l'évolution démographique de la Mayenne à l'horizon 2050. Utilisation de données INSEE et
+                    intégration via OpendataSoft.</p>
                 <div class="skill-tags">
                     <span class="skill-tag">Data Analysis</span>
                     <span class="skill-tag">OpendataSoft</span>
                     <span class="skill-tag">Dataviz</span>
                 </div>
-                <div style="margin-top: 20px; color: var(--accent-color); display: flex; align-items: center; gap: 5px;">
+                <div
+                    style="margin-top: 20px; color: var(--accent-color); display: flex; align-items: center; gap: 5px;">
                     Voir le projet <i data-lucide="external-link" size="16"></i>
                 </div>
             </div>
-            <div style="width: 300px; height: 180px; background: rgba(0,0,0,0.3); border-radius: 12px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
-                <img src="project-thumb.jpg" alt="Projection Population Mayenne" style="width: 100%; height: 100%; object-fit: cover;">
+            <div
+                style="width: 300px; height: 180px; background: rgba(0,0,0,0.3); border-radius: 12px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                <img src="project-thumb.jpg" alt="Projection Population Mayenne"
+                    style="width: 100%; height: 100%; object-fit: cover;">
             </div>
         </div>
     </section>
@@ -157,7 +178,8 @@
     <section id="contact" style="text-align: center;">
         <h2 class="section-title">On en discute ?</h2>
         <div class="glass-card" style="max-width: 600px; margin: 0 auto;">
-            <p style="margin-bottom: 30px;">Je suis à l'écoute d'opportunités en Data Analysis et Big Data. N'hésitez pas à me contacter pour échanger sur vos projets !</p>
+            <p style="margin-bottom: 30px;">Je suis à l'écoute d'opportunités en Data Analysis et Big Data. N'hésitez
+                pas à me contacter pour échanger sur vos projets !</p>
             <div style="display: flex; flex-direction: column; gap: 15px; margin-bottom: 30px;">
                 <div style="display: flex; align-items: center; justify-content: center; gap: 10px;">
                     <i data-lucide="mail" style="color: var(--primary-color);"></i>
@@ -172,7 +194,8 @@
                     <span>1 Rue des Viviers, 49000 Angers</span>
                 </div>
             </div>
-            <a href="mailto:eva.lassalle@hotmail.fr" class="btn btn-primary" style="display: inline-block;">Envoyer un email</a>
+            <a href="mailto:eva.lassalle@hotmail.fr" class="btn btn-primary" style="display: inline-block;">Envoyer un
+                email</a>
         </div>
     </section>
 
@@ -185,4 +208,5 @@
         lucide.createIcons();
     </script>
 </body>
+
 </html>
