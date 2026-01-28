@@ -3,17 +3,33 @@ const observerOptions = {
     threshold: 0.1
 };
 
+// Typewriter Effect Function
+function typeWriter(element, text, speed = 100) {
+    let i = 0;
+    element.innerHTML = '';
+    element.classList.add('blink');
+
+    function type() {
+        if (i < text.length) {
+            element.innerHTML += text.charAt(i);
+            i++;
+            setTimeout(type, speed + Math.random() * 50);
+        }
+    }
+    type();
+}
+
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('active');
 
-            // Trigger typewriter if the target contains it
             const typewriter = entry.target.querySelector('.typewriter');
-            if (typewriter) {
+            if (typewriter && !typewriter.dataset.started) {
+                typewriter.dataset.started = "true";
                 setTimeout(() => {
-                    typewriter.classList.add('animate');
-                }, 800); // Wait for the hero reveal animation
+                    typeWriter(typewriter, "Data Analyst", 120);
+                }, 1000);
             }
 
             observer.unobserve(entry.target);
@@ -23,6 +39,25 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('[data-reveal]').forEach(el => {
     observer.observe(el);
+});
+
+// 3D Tilt Effect for Glass Cards
+document.querySelectorAll('.glass-card').forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        const rotateX = (y - centerY) / 20;
+        const rotateY = (centerX - x) / 20;
+
+        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-5px) scale(1.02)`;
+    });
+
+    card.addEventListener('mouseleave', () => {
+        card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0) scale(1)`;
+    });
 });
 
 // Smooth Scroll for Nav Links
